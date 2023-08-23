@@ -1,8 +1,12 @@
 @import "vars";
+@import "product";
+@import "catalog";
+// @import "mixin";
 * {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -10,29 +14,78 @@ a {
 ul {
   list-style-type: none;
 }
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
 .center {
   padding-left: calc(50% - $siteWidth / 2);
   padding-right: calc(50% - $siteWidth / 2);
 }
 .header {
-  background-color: $colorBackBlock;
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  &-top {
+    background-color: $colorBackBlock;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: $gapHeader;
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      gap: $gridGap;
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $sectionBackground;
+    padding-top: 59px;
+    padding-bottom: 60px;
+    &__heading {
+      color: $colorSelectSite;
+      font-size: $fontSizeSubtitleHeader;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &_breadcrumps {
+      display: flex;
+      gap: 5px;
+      &__link {
+        color: $colorBreadcrumps;
+        font-size: $fontSizeBreadCrumps;
+        font-weight: 300;
+        line-height: normal;
+      }
+      &__link:hover {
+        color: $colorBreadcrumpsHover;
+      }
+      &__link__pink {
+        color: $colorSelectSite;
+        font-size: $fontSizeBreadCrumps;
+        font-weight: 700;
+        line-height: normal;
+      }
+      &__link__pink:hover {
+        color: $colorSelectSiteHover;
+      }
+    }
+  }
 }
-.header__left {
-  display: flex;
-  align-items: center;
-  gap: 41px;
-}
-.header__right {
-  display: flex;
-  align-items: center;
-  gap: 33px;
-}
+
 .section-1 {
   background-color: #f1e4e6;
   display: flex;
@@ -162,7 +215,7 @@ ul {
   }
   &__price {
     color: $colorSelectSite;
-    font-size: px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -315,8 +368,6 @@ ul {
 }
 .footer {
   background-color: $colorBackBlock;
-  padding-top: 30px;
-  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

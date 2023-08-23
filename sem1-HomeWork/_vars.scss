@@ -1,0 +1,35 @@
+// color
+$colorSelectSite: #f16d7f;
+$colorSelectSiteHover: #f88595;
+$sectionBackground: #f1e4e6;
+$colorBackBlock: #222;
+$textColor: #000;
+$subtitleTextColor: #9f9f9f;
+$colorBreadcrumps: #636363;
+$colorBreadcrumpsHover: #838383;
+$colorBackgroundCard: #f8f8f8;
+$colorBox: #fff;
+$colorTextCard: #5d5d5d;
+$colorFilterContent: #6f6e6e;
+$colorBorderDown: #ebebeb;
+
+// width
+$siteWidth: 1140px;
+$siteWidthTable: 736px;
+$siteWidthMobile: 360px;
+$widthFilter: 360px;
+
+// height
+$heightFilter: 132px;
+
+// gap
+$gridGap: 30px;
+$gapHeader: 41px;
+$thirdSite: ($siteWidth - $gridGap * 2)/3;
+$halfSite: ($siteWidth - $gridGap)/2;
+
+// indent
+
+// font_size
+$fontSizeSubtitleHeader: 24px;
+$fontSizeBreadCrumps: 14px;
