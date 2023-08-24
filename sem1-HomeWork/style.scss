@@ -1,6 +1,16 @@
 @import "vars";
 @import "product";
 @import "catalog";
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
 // @import "mixin";
 * {
   margin: 0;
@@ -36,6 +46,7 @@ summary::-webkit-details-marker {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
     &__left {
       display: flex;
       align-items: center;
@@ -45,6 +56,49 @@ summary::-webkit-details-marker {
       display: flex;
       align-items: center;
       gap: $gridGap;
+      &__nav {
+        background: #fff;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        width: 232px;
+        padding: 32px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 78px;
+        right: -99px;
+        animation: slide-left 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        z-index: 10;
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          &_item {
+            &__link__black {
+              color: $textColor;
+              font-size: 14px;
+              font-weight: 700;
+              line-height: normal;
+            }
+            &__link {
+              color: $colorSelectSite;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+        &_box {
+          margin-top: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 11px;
+          &__link {
+            color: $colorFilterContent;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
     }
   }
   &-bottom {
@@ -83,6 +137,14 @@ summary::-webkit-details-marker {
         color: $colorSelectSiteHover;
       }
     }
+  }
+}
+#burger {
+  position: absolute;
+  left: -99999999px;
+  visibility: hidden;
+  &:checked ~ .header-top__right__nav {
+    display: none;
   }
 }
 

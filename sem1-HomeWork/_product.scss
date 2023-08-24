@@ -282,3 +282,31 @@
     }
   }
 }
+.footer {
+  &__right__two_icons {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 31.5px);
+      grid-template-rows: 32px;
+      gap: 0.4vw;
+      &__icon {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__icon:hover {
+        background-color: $colorSelectSite;
+        border: none;
+        color: #fff;
+        .img_svg path {
+          fill: #f9f9f9;
+        }
+      }
+      &__icon:active {
+        background-color: rgb(234, 129, 129);
+        color: #fff;
+      }
+    }
+  }
+}
