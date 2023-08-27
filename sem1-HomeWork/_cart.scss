@@ -1,0 +1,235 @@
+@import "mixin";
+@import "vars";
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: border-box;
+}
+
+.section__cart {
+  padding-top: 96px;
+  padding-bottom: 128px;
+  @include lineLeftUp(128px);
+  &__left {
+    width: 57%;
+  }
+  &__item {
+    @include left(31px);
+    &__img {
+      width: 48%;
+      height: 306px;
+    }
+    &__title {
+      color: $colorBackBlock;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: normal;
+      width: 67%;
+      margin-bottom: 42px;
+    }
+    &__point {
+      margin-bottom: 6px;
+    }
+    &__point:last-child {
+      margin-bottom: 0;
+    }
+    &__text {
+      color: $colorTextCard;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &__block {
+      border: 1px solid $colorBorederItem;
+      padding: 0 16px;
+      color: $colorNumberCart;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+  &__box {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 55px;
+    padding-right: 22px;
+    width: 60%;
+    height: 306px;
+    &__top {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__button {
+      background-color: $colorWhite;
+      height: 20px;
+      padding-top: 6px;
+      border: none;
+      display: flex;
+    }
+    &__button:hover path {
+      fill: $colorSelectSiteHover;
+      cursor: pointer;
+    }
+  }
+  &__item1 {
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  }
+  &__item2 {
+    margin-bottom: 72px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  }
+  &__item3 {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__button {
+    width: 42%;
+    padding: 17px 30px;
+    color: $colorBackBlock;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: normal;
+    background-color: $colorWhite;
+    border: 1px solid $colorNumberCart;
+  }
+  &__button:hover {
+    @include buttonHover;
+  }
+
+  &__right {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+    &__box-button {
+      padding: 15px 41px;
+      background-color: $colorSelectSite;
+      border: 1px solid $colorSelectSite;
+      color: $colorWhite;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: normal;
+    }
+    &__box-button:hover {
+      @include buttonHoverWhite;
+    }
+    &__box {
+      background-color: $colorBoxCart;
+      width: 100%;
+      height: 214px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+    }
+    &__text-box {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+    }
+    &__line {
+      height: 1px;
+      background-color: $colorLine;
+      border: none;
+      width: 76%;
+    }
+    &__text-1 {
+      color: $colorTextCart;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 34px;
+      text-align: left;
+    }
+    &__span-1 {
+      padding-left: 20px;
+    }
+    &__text-2 {
+      color: $colorBackBlock;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: normal;
+      margin-right: 37px;
+    }
+    &__span-2 {
+      padding-left: 20px;
+      font-weight: 700;
+      color: $colorSelectSite;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    align-items: flex-start;
+    margin-top: 25px;
+    &__title {
+      color: $colorBackBlock;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: normal;
+      width: 45%;
+    }
+    &__button {
+      background-color: $colorWhite;
+      border: 1px solid $colorNumberCart;
+      color: $colorFormButtonCart;
+      font-size: 11px;
+      font-weight: 300;
+      line-height: normal;
+      padding: 10px 14px;
+      width: 28%;
+    }
+    &__button:hover {
+      @include buttonHover;
+    }
+  }
+  &__city {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: normal;
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-bottom: 16px;
+    width: 100%;
+  }
+  &__city::placeholder {
+    color: $colorFormCart;
+  }
+  &__state {
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-bottom: 16px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: normal;
+  }
+  &__state::placeholder {
+    color: $colorBackBlock;
+  }
+  &__postcode {
+    padding-top: 13px;
+    padding-left: 17px;
+    padding-bottom: 16px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: normal;
+  }
+  &__postcode::placeholder {
+    color: $colorBackBlock;
+  }
+}
+.pink__text {
+  color: $colorSelectSite;
+}
+.flex {
+  @include left(24px);
+}

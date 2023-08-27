@@ -1,0 +1,54 @@
+@mixin column($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin line($gap) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+@mixin lineLeft($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap;
+}
+@mixin lineLeftUp($gap) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: $gap;
+}
+@mixin left($gap) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $gap;
+}
+@mixin columnLeft($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $gap;
+}
+@mixin columnLeftUp($gap) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $gap;
+}
+@mixin buttonHover {
+  color: $colorWhite;
+  border: 1px solid $colorWhite;
+  background-color: $colorSelectSite;
+}
+@mixin buttonHoverWhite {
+  color: $colorBackBlock;
+  background-color: $colorBoxCart;
+  border: 1px solid $colorNumberCart;
+}
