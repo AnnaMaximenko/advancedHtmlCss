@@ -859,6 +859,32 @@
   line-height: normal;
   height: 29px;
 }
+.page-name__breadcrumps {
+  display: flex;
+}
+.page-name__link {
+  color: #636363;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: normal;
+}
+.page-name__link:hover {
+  color: #838383;
+}
+.page-name__link:not(:last-child)::after {
+  content: "/";
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.page-name__link_pink {
+  color: #f16d7f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
+.page-name__link_pink:hover {
+  color: #f88595;
+}
 
 .footer {
   background-color: #222;
