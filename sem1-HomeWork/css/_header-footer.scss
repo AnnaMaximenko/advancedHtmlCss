@@ -87,6 +87,9 @@
     display: none;
   }
 }
+.guidance path {
+  transition: fill 0.5s;
+}
 
 .guidance:hover path {
   fill: $colorSelectSiteHover;
