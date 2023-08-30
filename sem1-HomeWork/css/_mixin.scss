@@ -47,8 +47,30 @@
   border: 1px solid $colorWhite;
   background-color: $colorSelectSite;
 }
+@mixin buttonHoverPink {
+  color: $colorWhite;
+  border: 1px solid $colorSelectSite;
+  background-color: $colorSelectSite;
+}
+@mixin buttonActivePink {
+  color: $colorWhite;
+  border: 1px solid $colorSelectSite;
+  background-color: $colorActivePink;
+}
 @mixin buttonHoverWhite {
   color: $colorBackBlock;
   background-color: $colorBoxCart;
   border: 1px solid $colorNumberCart;
+}
+@mixin textHoverPink {
+  color: $colorSelectSite;
+}
+@mixin textActivePink {
+  color: $colorActivePink;
+}
+@mixin textHoverGrey {
+  color: $ColorSelectSiteGrey;
+}
+@mixin textActiveGrey {
+  color: $colorActiveGrey;
 }

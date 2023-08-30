@@ -1,0 +1,182 @@
+@import "../css/vars";
+@import "../css/mixin";
+.header {
+  background-color: $colorBackBlock;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: $gapHeader;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: $gridGap;
+    &__nav {
+      background: #fff;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      width: 232px;
+      padding: 32px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 78px;
+      right: -99px;
+      animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+      z-index: 10;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__link_black {
+      color: $textColor;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &__link_black:hover {
+      @include textHoverPink;
+    }
+    &__link_black:active {
+      @include textActivePink;
+    }
+    &__link_pink {
+      color: $colorSelectSite;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &__link_pink:hover {
+      @include textHoverGrey;
+    }
+    &__link_pink:active {
+      @include textActiveGrey;
+    }
+    &__box {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    &__link {
+      color: $colorFilterContent;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    &__link:hover {
+      @include textHoverPink;
+    }
+    &__link:active {
+      @include textActivePink;
+    }
+  }
+}
+#burger {
+  position: absolute;
+  left: -99999999px;
+  visibility: hidden;
+  &:checked ~ .header-right__nav {
+    display: none;
+  }
+}
+
+.guidance:hover path {
+  fill: $colorSelectSiteHover;
+  cursor: pointer;
+}
+.guidance:active path {
+  fill: $colorActivePink;
+  cursor: pointer;
+}
+
+//   &_breadcrumps {
+//     // display: flex;
+//     &__link {
+//       color: $colorBreadcrumps;
+//       font-size: $fontSizeBreadCrumps;
+//       font-weight: 300;
+//       line-height: normal;
+//     }
+//     &__link:hover {
+//       color: $colorBreadcrumpsHover;
+//     }
+//     &__link:not(:last-child)::after {
+//       content: "/";
+//       padding-left: 6px;
+//       padding-right: 6px;
+//     }
+
+//     &__link__pink {
+//       color: $colorSelectSite;
+//       font-size: $fontSizeBreadCrumps;
+//       font-weight: 700;
+//       line-height: normal;
+//     }
+//     &__link__pink:hover {
+//       color: $colorSelectSiteHover;
+//     }
+//   }
+// }
+.page-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $sectionBackground;
+  padding-top: 59px;
+  padding-bottom: 60px;
+  &__heading {
+    color: $colorSelectSite;
+    font-size: $fontSizeSubtitleHeader;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 29px;
+  }
+}
+
+.footer {
+  background-color: $colorBackBlock;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 79px;
+  &-left {
+    color: #fbfbfb;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &-right {
+    &__list {
+      display: flex;
+      gap: 0.4vw;
+    }
+    &__icon {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+      width: 32px;
+      height: 32px;
+    }
+    &__icon:hover {
+      @include buttonHoverPink;
+      .img_svg path {
+        fill: $colorWhite;
+      }
+    }
+    &__icon:active {
+      @include buttonActivePink;
+    }
+  }
+}
