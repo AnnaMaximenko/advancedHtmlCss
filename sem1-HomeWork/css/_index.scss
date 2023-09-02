@@ -126,7 +126,26 @@
   }
   &__img {
     width: 100%;
+    position: relative;
+    transition: all 1s;
   }
+  &__img:hover {
+    filter: brightness(40%);
+  }
+  &__wrap {
+    position: relative;
+    transition: all 1s;
+  }
+  &__svg {
+    position: absolute;
+    top: 180px;
+    left: 100px;
+    display: none;
+  }
+  &__wrap:hover .product-box__svg {
+    display: block;
+  }
+
   &__content {
     background-color: #f8f8f8;
     padding: 24px 16px;

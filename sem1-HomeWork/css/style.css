@@ -1257,6 +1257,24 @@
 }
 .product-box__img {
   width: 100%;
+  position: relative;
+  transition: all 1s;
+}
+.product-box__img:hover {
+  filter: brightness(40%);
+}
+.product-box__wrap {
+  position: relative;
+  transition: all 1s;
+}
+.product-box__svg {
+  position: absolute;
+  top: 180px;
+  left: 100px;
+  display: none;
+}
+.product-box__wrap:hover .product-box__svg {
+  display: block;
 }
 .product-box__content {
   background-color: #f8f8f8;
