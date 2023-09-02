@@ -6,15 +6,19 @@
 @import "../css/header-footer";
 @import "../css/subscription";
 @import "../css/registration";
+@import "../css/index";
+@import "../css/privilege";
 
-@keyframes slide-left {
+@keyframes fade-in-right {
   0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -30,6 +34,9 @@ a {
 ul {
   list-style-type: none;
 }
+html {
+  font-size: 14px;
+}
 summary {
   display: block;
 }
@@ -41,196 +48,15 @@ summary::-webkit-details-marker {
   padding-right: calc(50% - $siteWidth / 2);
 }
 
-.section-1 {
-  background-color: #f1e4e6;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 65px;
-}
-.section-1__left {
-  width: $halfSite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-1__right {
-  width: $halfSite;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-
-  &__pink-el {
-    background-color: $colorSelectSite;
-    height: 92px;
-    width: 12px;
-  }
-  &__title {
-    color: $textColor;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-  }
-  &__text {
-    color: $textColor;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-  &__pink-text {
-    color: $colorSelectSite;
+@media (max-width: 768px) {
+  .center {
+    padding-left: calc(50% - $siteWidthTable / 2);
+    padding-right: calc(50% - $siteWidthTable / 2);
   }
 }
-.section-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 260px 180px;
-  gap: 30px;
-  padding-bottom: 96px;
-  padding-top: 65px;
-  &__card1 {
-    background-image: url(../img/product1_section2.jpg);
-    background-position: center;
-    background-size: 100%;
-  }
-  &__card2 {
-    background-image: url(../img/product2_section2.jpg);
-    background-position: center;
-    background-size: 100%;
-  }
-  &__card3 {
-    background-image: url(../img/product3_section2.jpg);
-    background-position: center;
-    background-size: 100%;
-  }
-  &__card4 {
-    background-image: url(../img/product4_section2.jpg);
-    background-position: center;
-    background-size: contain;
-    grid-column: span 3;
-  }
-  &__card__center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  &__subtitle__card {
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  &__title__card {
-    color: $colorSelectSite;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-}
-.section-3 {
-  display: grid;
-  grid-template-columns: repeat(3, $thirdSite);
-  grid-template-rows: repeat(2, 580px);
-  gap: $gridGap;
-  margin-bottom: 48px;
-}
-.product {
-  width: $thirdSite;
-  display: flex;
-  flex-direction: column;
-  &__img {
-    width: 100%;
-  }
-  &__content {
-    background-color: #f8f8f8;
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  &__name {
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    color: $textColor;
-  }
-  &__text {
-    color: #5d5d5d;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-  }
-  &__price {
-    color: $colorSelectSite;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-}
-.block-4 {
-  margin-bottom: 95px;
-  display: flex;
-  justify-content: center;
-  &__button {
-    border: 1px solid rgba(255, 106, 106, 1);
-    width: 212px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $colorSelectSite;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  &__button:hover {
-    background-color: rgba(255, 106, 106, 1);
-    color: #fff;
-  }
-  &__button:active {
-    background-color: rgb(234, 129, 129);
-    color: #fff;
-  }
-}
-.section-5 {
-  background-color: $colorBackBlock;
-  padding-top: 103px;
-  padding-bottom: 104px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: $thirdSite;
-    gap: 20px;
-    &__title {
-      color: #fbfbfb;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
-    &__text {
-      color: #fbfbfb;
-      text-align: center;
-      font-size: 13.9px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      width: 85%;
-    }
+@media (max-width: 375px) {
+  .center {
+    padding-left: calc(50% - $siteWidthMobile / 2);
+    padding-right: calc(50% - $siteWidthMobile / 2);
   }
 }

@@ -1,0 +1,40 @@
+.privilege {
+  background-color: $colorBackBlock;
+  padding-top: 103px;
+  padding-bottom: 104px;
+  display: flex;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // width: $thirdSite;
+    gap: 20px;
+  }
+  &__title {
+    color: #fbfbfb;
+    font-size: 1.4 rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__text {
+    color: #fbfbfb;
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    // width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .privilege {
+    flex-direction: column;
+    gap: 48px;
+    &__text {
+      width: 45%;
+    }
+  }
+}

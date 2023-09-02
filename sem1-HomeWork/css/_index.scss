@@ -1,0 +1,214 @@
+@import "../css/mixin";
+@import "../css/vars";
+
+.intro {
+  background-color: #f1e4e6;
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 65px;
+  &-left {
+    width: 50%;
+    height: 765px;
+    &__img {
+      background-image: url(../img/section1-men.png);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-right {
+    // max-width: $halfSite;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    &__el_pink {
+      background-color: $colorSelectSite;
+      height: 92px;
+      width: 12px;
+    }
+    &__title {
+      color: $textColor;
+      font-size: 3.4rem;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+    &__text {
+      color: $textColor;
+      font-size: 2.3rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &__text_pink {
+      color: $colorSelectSite;
+    }
+  }
+}
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 260px 180px;
+  gap: 30px;
+  padding-bottom: 96px;
+  padding-top: 65px;
+  &__card {
+    background-position: center;
+    background-size: cover;
+  }
+  &__card-1 {
+    background-image: url(../img/product1_section2.jpg);
+  }
+  &__card-2 {
+    background-image: url(../img/product2_section2.jpg);
+  }
+  &__card-3 {
+    background-image: url(../img/product3_section2.jpg);
+  }
+  &__card-4 {
+    background-image: url(../img/product4_section2.jpg);
+    background-size: contain;
+    grid-column: span 3;
+    // grid-column: 1 / -1;
+  }
+  &__card_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__subtitle {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__title {
+    color: $colorSelectSite;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.section-product {
+  &__title {
+    color: $colorBackBlock;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  &__text {
+    color: $subtitleTextColor;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+}
+.product-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-auto-flow: dense;
+  // grid-template-rows: repeat(3, 580px);
+  gap: $gridGap;
+  margin-bottom: 48px;
+  &__product {
+    width: $thirdSite;
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__content {
+    background-color: #f8f8f8;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__name {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $textColor;
+  }
+  &__text {
+    color: #5d5d5d;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  &__price {
+    color: $colorSelectSite;
+    font-size: 1.15rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.block-4 {
+  margin-bottom: 95px;
+  display: flex;
+  justify-content: center;
+  &__button {
+    border: 1px solid rgba(255, 106, 106, 1);
+    width: 212px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorSelectSite;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 1s;
+  }
+  &__button:hover {
+    background-color: rgba(255, 106, 106, 1);
+    color: #fff;
+  }
+  &__button:active {
+    background-color: rgb(234, 129, 129);
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    justify-content: center;
+    &-left {
+      width: 50%;
+      height: 360px;
+      &__img {
+        width: 250px;
+      }
+    }
+    &-right {
+      &__title {
+        font-size: 3.1rem;
+      }
+      &__text {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .category {
+    grid-template-columns: repeat(3, 33.333%);
+    grid-template-rows: 167px 116px;
+    padding-top: 18px;
+    gap: 2%;
+  }
+  .product-box {
+    gap: 18px;
+  }
+}

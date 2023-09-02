@@ -8,7 +8,7 @@
   align-items: flex-start;
   gap: 128px;
   &-left {
-    width: 36%;
+    // width: 36%;
     &__title {
       color: $colorBackBlock;
       font-size: 16px;
@@ -94,7 +94,7 @@
     }
   }
   &-right {
-    width: 65%;
+    // width: 65%;
     &__title {
       color: $textColor;
       font-size: 24px;
@@ -123,6 +123,46 @@
     &__benefit::before {
       content: url(../img/arrow.svg);
       margin-right: 22px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .registration {
+    gap: 20px;
+    &-right {
+      width: 80%;
+      &__title {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+      &__text {
+        font-size: 16px;
+        margin-bottom: 21px;
+      }
+      &__benefit {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .registration {
+    flex-wrap: wrap;
+    gap: 40px;
+    &-right {
+      width: 80%;
+      &__title {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+      &__text {
+        font-size: 16px;
+        margin-bottom: 21px;
+      }
+      &__benefit {
+        font-size: 16px;
+      }
     }
   }
 }

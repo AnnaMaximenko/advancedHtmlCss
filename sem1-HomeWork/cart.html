@@ -144,18 +144,21 @@
     <div class="page-name center">
       <h2 class="page-name__heading">SHOPPING CART</h2>
     </div>
-    <section class="section__cart center">
-      <div class="section__cart__left">
-        <div class="section__cart__item section__cart__item1">
+    <section class="cart center">
+      <div class="cart-left">
+        <div class="cart-left__item cart-left__item-1">
           <img
             src="img/product3_section3.jpg"
             alt="selected product"
-            class="section__cart__item__img"
+            class="cart-left__img"
           />
-          <div class="section__cart__box">
-            <div class="section__cart__box__top">
-              <h2 class="section__cart__item__title">MANGO PEOPLE T-SHIRT</h2>
-              <button class="section__cart__box__button">
+          <div class="cart-left__box">
+            <div class="cart-left__top">
+              <h2 class="cart-left__title">
+                MANGO PEOPLE <br />
+                T-SHIRT
+              </h2>
+              <button class="cart-left__button">
                 <svg
                   width="18"
                   height="18"
@@ -171,36 +174,47 @@
               </button>
             </div>
 
-            <ul class="section__cart__item__points">
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">
+            <ul class="cart-left__points">
+              <li class="cart-left__point">
+                <p class="cart-left__text">
                   Price: <span class="pink__text">$300</span>
                 </p>
               </li>
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">Color: Red</p>
+              <li class="cart-left__point">
+                <p class="cart-left__text">Color: Red</p>
               </li>
-              <p class="section__cart__item__text">Color: Red</p>
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">Size: Xl</p>
+              <p class="cart-left__text">Color: Red</p>
+              <li class="cart-left__point">
+                <p class="cart-left__text">Size: Xl</p>
               </li>
-              <li class="section__cart__item__point flex">
-                <p class="section__cart__item__text">Quantity:</p>
-                <div class="section__cart__item__block">2</div>
+              <li class="cart-left__point flex">
+                <p class="cart-left__text">Quantity:</p>
+                <!-- <div class="section__cart__item__block">2</div> -->
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="cart-left__block"
+                  placeholder="2"
+                  min="1"
+                />
               </li>
             </ul>
           </div>
         </div>
-        <div class="section__cart__item section__cart__item2">
+        <div class="cart-left__item cart-left__item-2">
           <img
             src="img/product2-2_section3.png"
             alt="selected product"
-            class="section__cart__item__img"
+            class="cart-left__img"
           />
-          <div class="section__cart__box">
-            <div class="section__cart__box__top">
-              <h2 class="section__cart__item__title">MANGO PEOPLE T-SHIRT</h2>
-              <button class="section__cart__box__button">
+          <div class="cart-left__box">
+            <div class="cart-left__top">
+              <h2 class="cart-left__title">
+                MANGO PEOPLE <br />
+                T-SHIRT
+              </h2>
+              <button class="cart-left__button">
                 <svg
                   width="18"
                   height="18"
@@ -215,45 +229,54 @@
                 </svg>
               </button>
             </div>
-            <ul class="section__cart__item__points">
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">
+
+            <ul class="cart-left__points">
+              <li class="cart-left__point">
+                <p class="cart-left__text">
                   Price: <span class="pink__text">$300</span>
                 </p>
               </li>
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">Color: Red</p>
+              <li class="cart-left__point">
+                <p class="cart-left__text">Color: Red</p>
               </li>
-              <p class="section__cart__item__text">Color: Red</p>
-              <li class="section__cart__item__point">
-                <p class="section__cart__item__text">Size: Xl</p>
+              <p class="cart-left__text">Color: Red</p>
+              <li class="cart-left__point">
+                <p class="cart-left__text">Size: Xl</p>
               </li>
-              <li class="section__cart__item__point flex">
-                <p class="section__cart__item__text">Quantity:</p>
-                <div class="section__cart__item__block">2</div>
+              <li class="cart-left__point flex">
+                <p class="cart-left__text">Quantity:</p>
+                <!-- <div class="section__cart__item__block">2</div> -->
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="cart-left__block"
+                  placeholder="2"
+                  min="1"
+                />
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="section__cart__item section__cart__item3">
-          <button class="section__cart__button section__cart__clear">
+        <div class="cart-left__item cart-left__item-3">
+          <button class="cart-left__control cart-left__clear">
             CLEAR SHOPPING CART
           </button>
-          <button class="section__cart__button section__cart__continue">
+          <button class="cart-left__control cart-left__continue">
             CONTINUE SHOPPING
           </button>
         </div>
       </div>
-      <div class="section__cart__right">
-        <form action="#" class="section__cart__form">
-          <h3 class="section__cart__form__title">SHIPPING ADRESS</h3>
+      <div class="cart-right">
+        <form action="#" class="cart-right__form">
+          <h3 class="cart-right__title">SHIPPING ADRESS</h3>
           <input
             type="text"
             name=""
             id="city"
             placeholder="Bangladesh"
-            class="section__cart__city"
+            class="cart-right__city"
             required
           />
           <input
@@ -261,7 +284,7 @@
             name=""
             id="state"
             placeholder="State"
-            class="section__cart__state"
+            class="cart-right__state"
             required
           />
           <input
@@ -269,31 +292,25 @@
             name=""
             id="postcode"
             placeholder="Postcode / Zip"
-            class="section__cart__postcode"
+            class="cart-right__postcode"
             min="1"
             size="10"
             required
           />
-          <input
-            type="submit"
-            value="GET A QUOTE"
-            class="section__cart__form__button"
-          />
+          <input type="submit" value="GET A QUOTE" class="cart-right__button" />
         </form>
 
-        <div class="section__cart__right__box">
-          <div class="section__cart__right__text-box">
-            <p class="section__cart__right__text-1">
-              SUB TOTAL <span class="section__cart__right__span-1">$900</span>
+        <div class="cart-right__box">
+          <div class="cart-right__text-box">
+            <p class="cart-right__text-1">
+              SUB TOTAL <span class="cart-right__span-1">$900</span>
             </p>
-            <p class="section__cart__right__text-2">
-              GRAND TOTAL <span class="section__cart__right__span-2">$900</span>
+            <p class="cart-right__text-2">
+              GRAND TOTAL <span class="cart-right__span-2">$900</span>
             </p>
           </div>
-          <hr class="section__cart__right__line" />
-          <button class="section__cart__right__box-button">
-            PROCEED TO CHECKOUT
-          </button>
+          <hr class="cart-right__line" />
+          <button class="cart-right__box-button">PROCEED TO CHECKOUT</button>
         </div>
       </div>
     </section>
@@ -330,7 +347,7 @@
       </div>
     </section>
     <footer class="footer center">
-      <div class="footer-left">© 2021 Brand All Rights Reserved.</div>
+      <div class="footer-left">&copy;&nbsp;2021 Brand All Rights Reserved.</div>
       <div class="footer-right">
         <ul class="footer-right__list">
           <li class="footer-right__icon pinterest">
