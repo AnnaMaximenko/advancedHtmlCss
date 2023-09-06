@@ -127,7 +127,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .registration {
     gap: 20px;
     &-right {
@@ -146,7 +146,7 @@
     }
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .registration {
     flex-wrap: wrap;
     gap: 40px;

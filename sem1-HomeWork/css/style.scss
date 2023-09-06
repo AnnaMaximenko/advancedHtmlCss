@@ -48,13 +48,19 @@ summary::-webkit-details-marker {
   padding-right: calc(50% - $siteWidth / 2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .center {
     padding-left: calc(50% - $siteWidthTable / 2);
     padding-right: calc(50% - $siteWidthTable / 2);
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - $siteWidthMobileBig / 2);
+    padding-right: calc(50% - $siteWidthMobileBig / 2);
+  }
+}
+@media (max-width: 450px) {
   .center {
     padding-left: calc(50% - $siteWidthMobile / 2);
     padding-right: calc(50% - $siteWidthMobile / 2);

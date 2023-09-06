@@ -29,12 +29,20 @@
     // width: 85%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .privilege {
     flex-direction: column;
     gap: 48px;
     &__text {
       width: 45%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .privilege {
+    &__text {
+      width: 90%;
     }
   }
 }

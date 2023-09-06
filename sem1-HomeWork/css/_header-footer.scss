@@ -160,7 +160,7 @@
   &-right {
     &__list {
       display: flex;
-      gap: 0.4vw;
+      gap: 7px;
     }
     &__icon {
       background-color: #fff;
@@ -180,5 +180,23 @@
     &__icon:active {
       @include buttonActivePink;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-name {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .footer {
+    flex-direction: column-reverse;
+    padding-top: 43px;
+    padding-bottom: 24px;
+    height: 143px;
+  }
+}
+@media (max-width: 600px) {
+  .removal {
+    display: none;
   }
 }
